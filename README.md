@@ -1,8 +1,8 @@
-# test
+# three-webpack-boiler
 
-Empty project.
-
-## Building and running on localhost
+Simple boiler to get started on quick projects with threejs.  
+Make prototypes, try things out, run some tests.  
+I do not recommend using it for large and complex architectures.
 
 First install dependencies:
 
@@ -10,24 +10,46 @@ First install dependencies:
 npm install
 ```
 
-To create a production build:
-
-```sh
-npm run build-prod
-```
-
-To create a development build:
-
-```sh
-npm run build-dev
-```
-
 ## Running
 
+To run develop mode
+
 ```sh
-node dist/bundle.js
+npm run dev
 ```
 
-## Credits
+## Build
 
-Made with [createapp.dev](https://createapp.dev/)
+To build this project run
+
+```sh
+npm run build
+```
+
+## AssetsManager
+
+```sh
+src/assets/models
+src/assets/textures
+src/assets/sounds
+```
+
+Assets located in these folders are automatically imported in **AssetsManager.js**.  
+Textures are converted to THREE.Texture instances.  
+Sounds are converted to THREE.Audio instances.
+
+You can access them like that:
+
+```
+AssetsManager.[folderName].[assetName]
+```
+
+Example: I need to get a texture which is named "bake.jpg"
+
+```js
+const bakeTexture = AssetsManager.textures.bake
+console.log(bakeTexture)
+```
+
+Of course, you can customize it the way you like it.  
+ For instance, You could create **Howler** instances instead of **THREE.Audio** instances when it comes to loading sounds

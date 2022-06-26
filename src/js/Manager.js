@@ -2,6 +2,7 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import Stats from 'three/examples/jsm/libs/stats.module.js'
 import gsap from 'gsap'
+import AssetsManager from './utils/AssetsManager'
 
 import Cube from './components/Cube'
 
@@ -57,7 +58,7 @@ class Manager extends THREE.EventDispatcher {
             // alpha: true
         })
         this.renderer.setSize(this.width, this.height)
-        this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)) //limiter à 2
+        this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
     }
 
     setupControls() {

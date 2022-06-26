@@ -16,49 +16,6 @@ class AssetsManager {
         this._textureLoader = new THREE.TextureLoader()
     }
 
-    // loadFont(fonts, callback) {
-    //     if (fonts.length > 0) {
-    //         var strTest = 'giItTWQy01234&@=-i?0'
-    //         var _noFont = document.createElement('div')
-    //         document.body.appendChild(_noFont)
-    //         _noFont.innerText = strTest
-    //         _noFont.style.display = 'inline'
-    //         _noFont.style.visibility = 'hidden'
-    //         _noFont.style.position = 'fixed'
-    //         var _myFont = document.createElement('div')
-    //         document.body.appendChild(_myFont)
-    //         _myFont.innerText = strTest
-    //         _myFont.style.display = 'inline'
-    //         _myFont.style.visibility = 'hidden'
-    //         _myFont.style.position = 'fixed'
-    //         tryLoad()
-    //         var id = 0
-    //         function tryLoad() {
-    //             var timer = setInterval(function () {
-    //                 _myFont.style.fontFamily = fonts[id]
-    //                 if (
-    //                     _noFont.getBoundingClientRect().width !==
-    //                     _myFont.getBoundingClientRect().width
-    //                 ) {
-    //                     console.log(fonts[id] + ' loaded')
-    //                     if (id >= fonts.length - 1) {
-    //                         clearInterval(timer)
-    //                         document.body.removeChild(_noFont)
-    //                         document.body.removeChild(_myFont)
-    //                         setTimeout(() => {
-    //                             callback()
-    //                         }, 200)
-    //                     } else {
-    //                         id++
-    //                     }
-    //                 }
-    //             }, 100)
-    //         }
-    //     } else {
-    //         callback()
-    //     }
-    // }
-
     loadAssets() {
         this._loadTextures()
         this._loadModels()
