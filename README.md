@@ -52,4 +52,4 @@ console.log(bakeTexture)
 ```
 
 Of course, you can customize it the way you like it.  
- For instance, You could create **Howler** instances instead of **THREE.Audio** instances when it comes to loading sounds
+For instance, you could create **Howler** instances instead of **THREE.Audio** instances when it comes to loading sounds
