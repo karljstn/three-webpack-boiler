@@ -12,7 +12,7 @@ class Manager extends THREE.EventDispatcher {
     constructor() {
         super()
         this.canvas = document.getElementById('canvas')
-        gsap.ticker.fps(FPS)
+        // gsap.ticker.fps(FPS)
     }
 
     setup() {
@@ -54,7 +54,7 @@ class Manager extends THREE.EventDispatcher {
     setupRenderer() {
         this.renderer = new THREE.WebGLRenderer({
             canvas: this.canvas,
-            antialias: true,
+            antialias: false,
             // alpha: true
         })
         this.renderer.setSize(this.width, this.height)
